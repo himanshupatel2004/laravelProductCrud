@@ -1,27 +1,3 @@
-{{-- <div class="container">
-    <h2>Product List</h2>
-    <a href="{{ route('products.create') }}" class="btn btn-success mb-2">Add Product</a>
-    <table class="table">
-        @foreach($products as $product)
-        <tr>
-            <td>{{ $product->name }}</td>
-            <td>{{ $product->description }}</td>
-            <td>₹{{ number_format($product->price, 2) }}</td>
-            <td>
-                <a href="{{ route('products.show', $product) }}" class="btn btn-sm btn-info">Show</a>
-                <a href="{{ route('products.edit', $product) }}" class="btn btn-sm btn-primary">Edit</a>
-                <form action="{{ route('products.destroy', $product) }}" method="POST" style="display:inline;">
-                    @csrf @method('DELETE')
-                    <button onclick="return confirm('Delete this product?')"
-                        class="btn btn-sm btn-danger">Delete</button>
-                </form>
-            </td>
-        </tr>
-        @endforeach
-        </tbody>
-    </table>
-</div>
-@endsection --}}
 
 <head>
     <meta charset="utf-8">

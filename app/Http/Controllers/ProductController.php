@@ -47,13 +47,23 @@ class ProductController extends Controller
         return view('products.edit', compact('product'));
     }
 
-    public function update(ProductValidate $request)
-    {
-        $product = Product::findOrFail($request->id);
-        $product->update($request->validated());
+    public function update(Request $request)
+{
+    $request->validate([
+        'name' => 'required',
+        'description' => 'nullable',
+        'price' => 'required|numeric',
+    ]);
 
-        return redirect()->route('products.list')->with('success', 'Product updated successfully.');
-    }
+    $product = Product::findOrFail($request->id);
+    $product->update([
+        'name' => $request->name,
+        'description' => $request->description,
+        'price' => $request->price,
+    ]);
+
+    return redirect()->route('products.list')->with('success', 'Product updated successfully.');
+}
 
     public function delete($id) // Added delete method
     {

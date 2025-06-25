@@ -48,6 +48,8 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Create</button>
+            <a href="{{ route('products.list') }}" class="btn btn-secondary">Back to List</a>
+
         </form>
     </div>
 

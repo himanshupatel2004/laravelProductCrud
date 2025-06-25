@@ -10,7 +10,7 @@
         <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display:inline;">
             @csrf
             <input type="hidden" name="id" value="{{ $product->id }}">
-            <button onclick="return confirm('Delete this product?')" class="btn btn-sm btn-danger">Delete</button>
+            <button onclick="return confirm('Delete this product?')" class="btn btn-sm btn-danger">Remove</button>
         </form>
     </td>
 </tr>
