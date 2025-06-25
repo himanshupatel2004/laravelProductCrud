@@ -15,7 +15,6 @@
         @include('error_message')
 
         <h2><strong>Add Product</strong></h2>
-
         <form action="{{ route('products.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
@@ -48,7 +47,8 @@
             </div>
 
             <button type="submit" class="btn btn-primary">Create</button>
-            <a href="{{ route('products.list') }}" class="btn btn-secondary">Back to List</a>
+            {{-- <a href="{{ route('products.list') }}" class="btn btn-secondary">Back to List</a> --}}
+            <a href="{{ route('products.list') }}" class="btn btn-danger">See Product List</a>
 
         </form>
     </div>

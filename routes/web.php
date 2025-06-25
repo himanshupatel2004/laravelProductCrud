@@ -21,5 +21,5 @@ Route::prefix('products')->controller(ProductController::class)->group(function 
     Route::post('destroy', 'destroy')->name('products.destroy'); // process delete
 });
 
-Route::post('products/store', [ProductController::class, 'store'])->name('products.store');
-Route::get('products/list', [ProductController::class, 'index'])->name('products.list');
+// Route::post('products/store', [ProductController::class, 'store'])->name('products.store');
+// Route::get('products/list', [ProductController::class, 'index'])->name('products.list');

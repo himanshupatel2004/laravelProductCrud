@@ -30,6 +30,11 @@
             </div>
 
             <a href="{{ route('products.list') }}" class="btn btn-secondary">Back to List</a>
+            <form action="{{ route('products.destroy', $product->id) }}" method="POST" style="display:inline;">
+            @csrf
+            <input type="hidden" name="id" value="{{ $product->id }}">
+            <button onclick="return confirm('Delete this product?')" class="btn btn btn-danger">Remove</button>
+        </form>
         </form>
     </div>
 </body>
